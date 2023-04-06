@@ -1,0 +1,51 @@
+/*
+*Removes all default whitespace
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*
+*Reset CSS model sizing calculations
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* 
+End of resert
+ */
+
+button {
+  background-color: peachpuff;
+  /* margin-right: 10px; */
+  padding: 5px 10px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color:lightgoldenrodyellow
+}
+
+header > button {
+    margin-right: 10px;
+}
+
+body {
+  background-image: url('../public/background.jpg');
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
