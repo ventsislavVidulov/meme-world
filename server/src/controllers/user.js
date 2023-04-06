@@ -5,14 +5,13 @@ import api from '../services/user.js';
 
 
 router.post('/register', async (req, res) => {
-    const { email, password } = req.body;
-
+    const { email, password, fname, lname } = req.body;
     try {
-        const result = await api.register(email, password);
+        const result = await api.register(email, password, fname, lname);
         res.status(201).json(result);
     } catch (error) {
         console.error(error);
-        res.status(400).json({message: error.message});
+        res.status(400).json({ message: error.message });
     }
 });
 
@@ -25,7 +24,7 @@ router.post('/login', async (req, res) => {
         res.json(result);
     } catch (error) {
         console.error(error);
-        res.status(400).json({message: error.message});
+        res.status(400).json({ message: error.message });
     }
 });
 

@@ -6,7 +6,7 @@ import { User } from "../models/User.js";
 const JWT_SECRET = 'onrvnnosnvjolsfnvolnsjlvnvolnjfnen';
 const blacklist = new Set();
 
-async function register(email, password) {
+async function register(email, password, fname, lname) {
     //Checking if the email is used
     const existing = await User.findOne({ email: new RegExp(`^${email}$`, 'i') });
     //  console.log( new RegExp(`^${email}$`, 'i'));
@@ -17,7 +17,9 @@ async function register(email, password) {
 
     const user = new User({
         email,
-        hashedPassword
+        hashedPassword, 
+        fname, 
+        lname
     });
 
     await user.save();
@@ -50,6 +52,8 @@ function logout(token) {
 function createSession(user) {
     const payload = {
         email: user.email,
+        fname: user.fname,
+        lname: user.lname,
         _id: user._id
     };
 
@@ -60,6 +64,8 @@ function createSession(user) {
     return {
         email: user.email,
         accessToken,
+        fname: user.fname,
+        lname: user.lname,
         _id: user._id
     };
 }

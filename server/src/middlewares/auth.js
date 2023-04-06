@@ -7,17 +7,19 @@ export function authMiddleware() {
         if (token) {
             try {
                 const payload = api.validateToken(token);
-            
                 req.user = {
                     email: payload.email,
+                    fname: payload.fname,
+                    lname: payload.lname,
                     _id: payload._id,
                     token
                 }
+     
             } catch (error) {
                 return res.status(401).json({ message: 'Invalid access token' })
             }
         }
-
+        console.log(req.user);
         next();
     }
 }
