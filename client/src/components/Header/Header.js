@@ -1,4 +1,4 @@
-import styles from './Header.module.css'
+import styles from './Header.module.css';
 
 const Header = () => {
     return (
@@ -16,7 +16,7 @@ const Header = () => {
                 My memes
             </button>
         </header>
-    )
+    );
 }
 
 export default Header;
