@@ -8,7 +8,7 @@ import { authMiddleware } from './src/middlewares/auth.js';
 
 async function start() {
     try {
-        const db = await mongoose.connect('mongodb://127.0.0.1:27017/rest');
+        const db = await mongoose.connect('mongodb://127.0.0.1:27017/meme');
         console.log('DB ready')
     } catch (error) {
         console.log('Erorr connectiong to DB');
