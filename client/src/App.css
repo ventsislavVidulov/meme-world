@@ -23,8 +23,12 @@ html {
 End of resert
  */
 
+ :root {
+  --peach-color: peachpuff;
+ }
+
 button {
-  background-color: peachpuff;
+  background-color: var(--peach-color);
   /* margin-right: 10px; */
   padding: 5px 10px;
   border-radius: 8px;
@@ -48,4 +52,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  /* display: flex;
+  flex-direction: column; */
 }
