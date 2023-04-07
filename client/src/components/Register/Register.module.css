@@ -1,0 +1,93 @@
+:root {
+  --btn-color: #ae3c33;
+  --shadows: #b7b327;
+  --border-color: #cccccc;
+}
+*,
+*::before,
+*::after {
+  font-family: "Mulish", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../../public/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 20px 15px 15px var(--shadows);
+  width: 60%;
+  /* height: 60%; */
+  border-radius: 30px;
+  padding: 5%;
+  overflow: hidden;
+  border: 5px solid var(--peach-color);
+  margin: 40px auto;
+}
+
+.rounded {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 2% 5%;
+}
+
+/* button {
+    background-color: var(--btn-color);
+    color: white;
+} */
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-self: center;
+}
+
+.double,
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 2% ;
+}
+
+.double,
+.inputGroup,
+.rounded {
+ padding: 10px 0;
+}
+
+
+.margin {
+  margin: 2%;
+}
+
+.double > .inputGroup {
+  flex-basis: 50%;
+  margin-right: 0;
+}
+
+.double {
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
+  margin-left: 0;
+}
+label {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* input[type="checkbox"] {
+
+} */
+
