@@ -1,7 +1,15 @@
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+
+import styles from './Register.module.css';
+
 import { register } from '../../services/authService';
-import styles from './Register.module.css'
+import { AuthContext } from "../../contexts/authContext";
 
 const Register = () => {
+
+const{ userLogin } = useContext(AuthContext);
+const navigate = useNavigate();
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -9,15 +17,21 @@ const Register = () => {
         const {
             email,
             password,
+            confirmPassword,
             fname,
             lname
         } = Object.fromEntries(new FormData(e.target));
 
         //   console.log(email, password, fname, lname);
 
+        if (password !== confirmPassword) {
+            return;
+        }
+
         register(email, password, fname, lname)
             .then(authData => {
-                console.log(authData);
+                userLogin(authData);
+                navigate('/');
             })
     }
 
@@ -44,8 +58,8 @@ const Register = () => {
                     <input className={styles.rounded} type="password" name="password" id="password" />
                 </div>
                 <div className={styles.inputGroup}>
-                    <label htmlFor="re-pass">Confirm password</label>
-                    <input className={styles.rounded} type="password" name="re-pass" id="re-pass" />
+                    <label htmlFor="confirmPassword">Confirm password</label>
+                    <input className={styles.rounded} type="password" name="confirmPassword" id="confirmPassword" />
                 </div>
                 <div className={styles.margin}>
                     <input type="checkbox" name="accept" id="accept" />
