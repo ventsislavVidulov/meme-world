@@ -1,20 +1,41 @@
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+
 import styles from './Header.module.css';
+import { AuthContext } from '../../contexts/authContext';
 
 const Header = () => {
+
+    const { user } = useContext(AuthContext);
+    console.log(user);
+
     return (
         <header className={styles.header}>
-            <button>
-                Log in
-            </button>
-            <button>
-                Register
-            </button>
-            <button>
-                Log out
-            </button>
-            <button>
-                My memes
-            </button>
+
+            {user.fname
+                ? <>
+                    <button>
+                        <Link to={"/logout"}>
+                            Log out
+                        </Link>
+                    </button>
+                    <button>
+                        My memes
+                    </button>
+                </>
+                : <>
+                    <button>
+                        <Link to={"/login"}>
+                            Log in
+                        </Link>
+                    </button>
+                    <button>
+                        <Link to={"/register"}>
+                            Register
+                        </Link>
+                    </button>
+                </>
+            }
         </header>
     );
 }
