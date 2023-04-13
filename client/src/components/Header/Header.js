@@ -22,6 +22,12 @@ const Header = () => {
                     <button>
                         My memes
                     </button>
+                    <button>
+                        <Link to={"/create"}>
+                            Create meme
+                        </Link>
+
+                    </button>
                 </>
                 : <>
                     <button>
