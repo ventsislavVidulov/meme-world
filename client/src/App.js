@@ -9,6 +9,7 @@ import Login from './components/Login/Login';
 import Register from './components/Register/register';
 import Logout from './components/Logout/Logout';
 import Home from './components/Home/Home';
+import CreateMeme from './components/CreateMeme/CreateMeme';
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/register" element={<Register/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/logout" element={<Logout/>}/>
+        <Route path="/create" element={<CreateMeme/>}/>
       </Routes>
     </AuthProvider >
   );
