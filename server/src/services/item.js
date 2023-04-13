@@ -10,13 +10,9 @@ async function getAll(query) {
 
 async function create(item) {
     const result = new Item({
-        make: item.make,
-        model: item.model,
-        year: item.year,
+        title: item.title,
         description: item.description,
-        price: item.price,
-        img: item.img,
-        material: item.material,
+        imgUrl: item.imgUrl,
         _ownerId: item._ownerId
     });
 
