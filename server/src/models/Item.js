@@ -4,7 +4,7 @@ const ObjectId = Types.ObjectId;
 const itemSchema = new Schema({
     title: { type: String, required: true },
     description: { type: String, required: true },
-    img: { type: String, required: true  },
+    imgUrl: { type: String, required: true  },
     _ownerId: { type: ObjectId, ref: 'User' }
 });
 
