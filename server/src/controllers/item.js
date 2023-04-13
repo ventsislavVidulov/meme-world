@@ -17,13 +17,9 @@ router.get('/', async (req, res) => {
 
 router.post('/', isAuth(), async (req, res) => {
     const item = {
-        make: req.body.make,
-        model: req.body.model,
-        year: req.body.year,
+        title: req.body.title,
         description: req.body.description,
-        price: req.body.price,
-        img: req.body.img,
-        material: req.body.material,
+        imgUrl: req.body.imgUrl,
         _ownerId: req.user._id
     }
     try {
