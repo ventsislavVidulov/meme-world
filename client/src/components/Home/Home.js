@@ -1,3 +1,5 @@
+import { MemeCard } from "../MemeCard/MemeCard";
+
 const Home = () => { 
 
     return (
