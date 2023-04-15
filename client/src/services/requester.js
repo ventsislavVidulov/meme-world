@@ -4,7 +4,7 @@ const request = async (method, url, data) => {
         const authStoredData = JSON.parse(user || '{}');
 
         let headers = {}
-        console.log(`${authStoredData.accessToken} by requester`)
+        // console.log(`${authStoredData.accessToken} by requester`);
         if (authStoredData.accessToken) {
             headers['X-Authorization'] = authStoredData.accessToken;
         }
@@ -25,7 +25,7 @@ const request = async (method, url, data) => {
         }
         const response = await buildRequest;
 
-        console.log(response);
+        // console.log(response);
 
         const result = await response.json();
 
