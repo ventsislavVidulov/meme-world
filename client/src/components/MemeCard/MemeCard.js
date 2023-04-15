@@ -2,7 +2,7 @@ import styles from './MemeCard.module.css'
 
 export const MemeCard = ({ meme }) => {
 
-    return(
+    return (
         <div className={styles.card}>
             <h1>{meme.title}</h1>
             <img src={meme.imgUrl} alt="" />
