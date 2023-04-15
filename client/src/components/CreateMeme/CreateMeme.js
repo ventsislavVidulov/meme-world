@@ -1,20 +1,18 @@
-import { useNavigate } from 'react-router';
+
 
 import styles from './CreateMeme.module.css';
 
 import { createMeme } from '../../services/memeService';
 
-const CreateMeme = () => {
-
-    const navigate = useNavigate();
-
+const CreateMeme = ({updateMemeState}) => {
     const onSubmit = (e) => {
         e.preventDefault();
 
         const memeData = Object.fromEntries(new FormData(e.target));
-        createMeme(memeData);
-
-        navigate('/');
+        createMeme(memeData)
+            .then(result => {
+                updateMemeState(result);
+            });
     }
 
     return (
@@ -31,9 +29,9 @@ const CreateMeme = () => {
                 </div>
                 <div className={styles.inputGroup}>
                     <label htmlFor="description">Description</label>
-                    <input className={styles.rounded} type="text-area" name="description" id="description" />
+                    <input className={styles.rounded} type="text" name="description" id="description" />
                 </div>
-                <button type="submit" className={styles.rounded & styles.margin}>
+                <button type="submit" className={styles.rounded && styles.margin}>
                     CREATE MEME
                 </button>
             </form>
