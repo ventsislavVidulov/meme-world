@@ -1,8 +1,13 @@
+import { useContext } from 'react';
+
 import styles from './Home.module.css'
 
+import { MemeContext } from '../../contexts/memeContext';
 import { MemeCard } from "../MemeCard/MemeCard";
 
-const Home = ({ memes }) => {
+const Home = () => {
+
+const {memes} = useContext(MemeContext);
 
     return (
         <>
