@@ -1,10 +1,13 @@
-
+import { useContext } from 'react';
 
 import styles from './CreateMeme.module.css';
 
 import { createMeme } from '../../services/memeService';
+import { MemeContext } from '../../contexts/memeContext';
 
-const CreateMeme = ({updateMemeState}) => {
+const CreateMeme = () => {
+    const updateMemeState = useContext(MemeContext);
+    
     const onSubmit = (e) => {
         e.preventDefault();
 
