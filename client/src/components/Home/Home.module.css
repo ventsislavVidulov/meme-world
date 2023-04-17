@@ -1,10 +1,16 @@
+/* section {
+  position: relative;
+  top: 180px;
+} */
+
 h1 {
-    font-size: 40px;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .main {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  flex-wrap: wrap;
 }

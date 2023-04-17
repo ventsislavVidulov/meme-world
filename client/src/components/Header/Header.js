@@ -10,38 +10,44 @@ const Header = () => {
     // console.log(user);
 
     return (
-        <header className={styles.header}>
+        <header >
+            <div className={styles["container"]}>
+                <div className={styles["logo-container"]}>
+                    <Link to={"/"}>
+                        <img className={styles.img} src="/memeLogo.png" alt="" />
+                    </Link>
+                </div>
+                {user.fname
+                    ? <>
+                        <button>
+                            <Link to={"/logout"}>
+                                Log out
+                            </Link>
+                        </button>
+                        <button>
+                            My memes
+                        </button>
+                        <button>
+                            <Link to={"/create"}>
+                                Create meme
+                            </Link>
 
-            {user.fname
-                ? <>
-                    <button>
-                        <Link to={"/logout"}>
-                            Log out
-                        </Link>
-                    </button>
-                    <button>
-                        My memes
-                    </button>
-                    <button>
-                        <Link to={"/create"}>
-                            Create meme
-                        </Link>
-
-                    </button>
-                </>
-                : <>
-                    <button>
-                        <Link to={"/login"}>
-                            Log in
-                        </Link>
-                    </button>
-                    <button>
-                        <Link to={"/register"}>
-                            Register
-                        </Link>
-                    </button>
-                </>
-            }
+                        </button>
+                    </>
+                    : <>
+                        <button>
+                            <Link to={"/login"}>
+                                Log in
+                            </Link>
+                        </button>
+                        <button>
+                            <Link to={"/register"}>
+                                Register
+                            </Link>
+                        </button>
+                    </>
+                }
+            </div>
         </header>
     );
 }

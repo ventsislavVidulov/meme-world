@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --btn-color: #ae3c33;
   --shadows: #b7b327;
   --border-color: #cccccc;
@@ -11,7 +11,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-}
+}  */
 
 .container {
   display: flex;
@@ -45,6 +45,7 @@ form {
   flex-direction: column;
   width: 60%;
   align-self: center;
+
 }
 
 .double,
@@ -81,10 +82,15 @@ label {
   font-size: 18px;
   margin-top: 10px;
   margin-bottom: 5px;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
   text-align: center;
 }
+
+/* button {
+  margin: 0;
+} */
 
 

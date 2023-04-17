@@ -19,7 +19,7 @@ export function authMiddleware() {
                 return res.status(401).json({ message: 'Invalid access token' })
             }
         }
-        console.log(`${req.user} by auth middleware`);
+        // console.log(`${req.user} by auth middleware`);
         next();
     }
 }

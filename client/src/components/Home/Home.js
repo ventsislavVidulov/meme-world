@@ -10,9 +10,9 @@ const Home = () => {
 const {memes} = useContext(MemeContext);
 
     return (
-        <>
+        <section>
             <h1>
-                HOME
+                ALL MEMES
             </h1>
         <div className={styles.main}>
             {memes?.length > 0
@@ -20,7 +20,7 @@ const {memes} = useContext(MemeContext);
                 : <h3 className={styles.noMemes}>No memes yet</h3>
             }
         </div>
-        </>
+        </section>
     )
 }
 

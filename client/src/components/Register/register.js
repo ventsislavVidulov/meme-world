@@ -8,8 +8,8 @@ import { AuthContext } from "../../contexts/authContext";
 
 const Register = () => {
 
-const{ userLogin } = useContext(AuthContext);
-const navigate = useNavigate();
+    const { userLogin } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -60,12 +60,6 @@ const navigate = useNavigate();
                 <div className={styles.inputGroup}>
                     <label htmlFor="confirmPassword">Confirm password</label>
                     <input className={styles.rounded} type="password" name="confirmPassword" id="confirmPassword" />
-                </div>
-                <div className={styles.margin}>
-                    <input type="checkbox" name="accept" id="accept" />
-                    <label htmlFor="accept">
-                        I accept the Terms of Use &amp; Privacy Policy.
-                    </label>
                 </div>
                 <button type="submit" className={styles.rounded & styles.margin}>
                     REGISTER NOW

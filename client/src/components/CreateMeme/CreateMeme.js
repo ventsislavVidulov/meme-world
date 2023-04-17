@@ -6,15 +6,16 @@ import { createMeme } from '../../services/memeService';
 import { MemeContext } from '../../contexts/memeContext';
 
 const CreateMeme = () => {
-    const updateMemeState = useContext(MemeContext);
-    
+    const {addMemeToState} = useContext(MemeContext);
+
     const onSubmit = (e) => {
         e.preventDefault();
 
         const memeData = Object.fromEntries(new FormData(e.target));
         createMeme(memeData)
             .then(result => {
-                updateMemeState(result);
+                console.log(result);
+                addMemeToState(result);
             });
     }
 

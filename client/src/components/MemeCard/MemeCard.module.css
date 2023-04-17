@@ -1,11 +1,15 @@
 .card {
-    width: 500px;
-    /* background-color: var(--white); */
-        background-color: white;
-    border: 10px solid var(--peach-color);
-    border-radius: 10px;
+  width: 500px;
+  /* background-color: var(--white); */
+  background-color: white;
+  border: 10px solid var(--peach-color);
+  border-radius: 10px;
 }
 
-img {
-    width: 100%;
+.card:hover {
+    cursor: pointer;
+}
+
+.img {
+  width: 100%;
 }

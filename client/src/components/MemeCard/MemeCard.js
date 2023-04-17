@@ -1,11 +1,19 @@
+import { useNavigate } from 'react-router-dom';
+
 import styles from './MemeCard.module.css'
 
 export const MemeCard = ({ meme }) => {
+    const memeId = meme._id;
+    const navigate = useNavigate();
+
+    const onClick = () => {
+        navigate(`/${memeId}`)
+    }
 
     return (
-        <div className={styles.card}>
+        <div className={styles.card} onClick={onClick}>
             <h1>{meme.title}</h1>
-            <img src={meme.imgUrl} alt="" />
+            <img className={styles.img} src={meme.imgUrl} alt="" />
             <p>{meme.description}</p>
         </div>
     );

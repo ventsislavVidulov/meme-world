@@ -17,7 +17,7 @@ export const MemeProvider = ({ children }) => {
             .catch(error => console.log(error));
     }, []);
 
-    const updateMemeState = (memeData) => {
+    const addMemeToState = (memeData) => {
         setMemes(state => [
             ...state,
             memeData,
@@ -26,10 +26,21 @@ export const MemeProvider = ({ children }) => {
         navigate('/');
     };
 
+    const editMemeInState = (memeId, memeData) => {
+        setMemes(state => state.map(x => x._id === memeId ? memeData : x));
+    }
+
+    const deleteMemeFromState = (memeId) => {
+        const index = state => state.findIndex(x => x._id === memeId);
+        setMemes(state => state.splice (index, 1));
+    }
+
     return (
         <MemeContext.Provider value={{
             memes,
-            updateMemeState
+            addMemeToState,
+            editMemeInState,
+            deleteMemeFromState
         }}>
             {children}
         </MemeContext.Provider>
