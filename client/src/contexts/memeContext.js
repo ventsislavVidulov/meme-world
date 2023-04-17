@@ -31,8 +31,7 @@ export const MemeProvider = ({ children }) => {
     }
 
     const deleteMemeFromState = (memeId) => {
-        const index = state => state.findIndex(x => x._id === memeId);
-        setMemes(state => state.splice (index, 1));
+        setMemes(state => state.filter(x => x._id !== memeId) );
     }
 
     return (
