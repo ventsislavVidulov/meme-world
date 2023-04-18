@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 /*
 *Removes all default whitespace
 */
@@ -37,24 +37,24 @@ input {
   text-indent: 10px;
 }
 
-button {
+/* button {
   background-color: var(--peach-color);
-  /* margin-right: 10px; */
+  margin-right: 10px;
   padding: 5px 10px;
   border-radius: 8px;
   outline: none;
   border: none;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
-}
+} */
 
-button:hover {
-  background-color: lightgoldenrodyellow;
+/* button:hover {
+  background-color: tomato;
 }
 
 header > button {
   margin-right: 10px;
-}
+} */
 
 body {
   background-image: url("../public/background.jpg");
@@ -64,4 +64,8 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: "Roboto", sans-serif;
+}
+
+.description {
+  font-family: 'Pacifico', cursive;
 }
