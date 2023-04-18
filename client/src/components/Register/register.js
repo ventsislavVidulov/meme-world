@@ -61,7 +61,7 @@ const Register = () => {
                     <label htmlFor="confirmPassword">Confirm password</label>
                     <input className={styles.rounded} type="password" name="confirmPassword" id="confirmPassword" />
                 </div>
-                <button type="submit" className={styles.rounded & styles.margin}>
+                <button type="submit" className={styles.rounded && styles.margin && styles.button}>
                     REGISTER NOW
                 </button>
             </form>
