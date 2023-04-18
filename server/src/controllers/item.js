@@ -51,7 +51,7 @@ router.put('/:id', preload(api), isAuthor(), async (req, res) => {
         console.error(error);
         res.status(400).json({ message: 'Request error' });
     }
-});
+}); 
 
 
 router.delete('/:id', preload(api), isAuthor(), async (req, res) => {
