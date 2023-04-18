@@ -23,6 +23,7 @@ async function start() {
 
     app.use('/data/catalog', itemController);
     app.use('/users', userController);
+    
 
     app.listen(3030, () => console.log('REST service started on port 3030'));
 
