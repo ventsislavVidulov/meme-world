@@ -81,7 +81,19 @@
   h1 {
     text-align: center;
   }
+
+  .button {
+    background-color: var(--peach-color);
+    /* margin-right: 10px; */
+    padding: 5px 10px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+  }
   
-  /* input[type="checkbox"] {
+  .button:hover {
+    background-color: tomato;
+  }
   
-  } */
