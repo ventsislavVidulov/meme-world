@@ -45,7 +45,6 @@ form {
   flex-direction: column;
   width: 60%;
   align-self: center;
-
 }
 
 .double,
@@ -53,15 +52,14 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 2% ;
+  margin: 0 2%;
 }
 
 .double,
 .inputGroup,
 .rounded {
- padding: 10px 0;
+  padding: 10px 0;
 }
-
 
 .margin {
   margin: 2%;
@@ -82,15 +80,24 @@ label {
   font-size: 18px;
   margin-top: 10px;
   margin-bottom: 5px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
   text-align: center;
 }
 
-/* button {
-  margin: 0;
-} */
+.button {
+  background-color: var(--peach-color);
+  /* margin-right: 10px; */
+  padding: 5px 10px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
 
-
+.button:hover {
+  background-color: tomato;
+}
