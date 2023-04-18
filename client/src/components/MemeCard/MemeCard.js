@@ -14,7 +14,7 @@ export const MemeCard = ({ meme }) => {
         <div className={styles.card} onClick={onClick}>
             <h1>{meme.title}</h1>
             <img className={styles.img} src={meme.imgUrl} alt="" />
-            <p>{meme.description}</p>
+            <p className={styles.description}>{meme.description}</p>
         </div>
     );
 }
