@@ -41,7 +41,7 @@ const Login = () => {
                     <input className={styles.rounded} type="password" name="password" id="password" />
                 </div>
 
-                <button type="submit" className={styles.rounded & styles.margin}>
+                <button type="submit" className={styles.rounded && styles.margin && styles.button}>
                     LOGIN
                 </button>
             </form>
