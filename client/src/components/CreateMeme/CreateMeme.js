@@ -35,7 +35,7 @@ const CreateMeme = () => {
                     <label htmlFor="description">Description</label>
                     <input className={styles.rounded} type="text" name="description" id="description" />
                 </div>
-                <button type="submit" className={styles.rounded && styles.margin}>
+                <button type="submit" className={styles.rounded && styles.margin && styles.button}>
                     CREATE MEME
                 </button>
             </form>
