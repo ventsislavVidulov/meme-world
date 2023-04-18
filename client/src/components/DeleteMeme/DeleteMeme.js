@@ -45,7 +45,7 @@ const DeleteMeme = () => {
                     <label htmlFor="description">Description</label>
                     <input className={styles.rounded} type="text" name="description" id="description" defaultValue={currentMeme.description} disabled/>
                 </div>
-                <button type="submit" className={styles.rounded && styles.margin}>
+                <button type="submit" className={styles.rounded && styles.margin && styles.button}>
                     DELETE MEME
                 </button>
             </form>
