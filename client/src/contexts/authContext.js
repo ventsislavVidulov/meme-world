@@ -22,27 +22,16 @@ export const AuthProvider = ({
             user: auth,
             userLogin,
             userLogout,
-            isAuthenticated: !!auth.accessToken
+            isLogged: !!auth.accessToken
         }}>
             {children}
         </AuthContext.Provider>  
     );
 };
 
-// Custom Hook
+
 export const useAuthContext = () => {
     const context = useContext(AuthContext);
 
     return context;
 };
-
-// With HOC
-export const withAuth = (Component) => {
-    const AuthWrapper = (props) => {
-        const context = useContext(AuthContext);
-        
-        return <Component {...props} auth={context} />
-    }
-
-    return AuthWrapper;
-} 
