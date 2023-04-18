@@ -32,13 +32,10 @@ async function getById(id) {
 
 async function updateById(existing, item) {
 
-    existing.make = item.make;
-    existing.model = item.model;
-    existing.year = item.year;
+    existing.title = item.title;
     existing.description = item.description;
     existing.price = item.price;
-    existing.img = item.img;
-    existing.material = item.material;
+    existing.imgUrl = item.imgUrl;
 
     await existing.save();
     return existing;
