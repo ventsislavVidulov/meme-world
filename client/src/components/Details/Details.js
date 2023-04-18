@@ -37,8 +37,8 @@ const Details = () => {
                 <div className={styles.description}> {currentMeme.description}</div>
                 {isOwner ?
                     <>
-                        <button><Link to={`edit`}>EDIT</Link></button>
-                        <button><Link to={`delete`}>DELETE</Link></button>
+                        <button className={styles.button}><Link to={`edit`}>EDIT</Link></button>
+                        <button className={styles.button}><Link to={`delete`}>DELETE</Link></button>
                     </> :
                     <></>
                 }
