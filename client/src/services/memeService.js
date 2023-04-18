@@ -15,8 +15,9 @@ export const createMeme = (data) => {
 }
 
 export const editMeme = (memeId, data) => {
+    // console.log(data);
     return request.put(`${baseUrl}/${memeId}`, data);
-} 
+}
 
 export const deleteMeme = (memeId) => {
     return request.del(`${baseUrl}/${memeId}`)
