@@ -19,15 +19,15 @@ const Header = () => {
                 </div>
                 {user.fname
                     ? <>
-                        <button>
+                        <button className={styles.button}>
                             <Link to={"/logout"}>
                                 Log out
                             </Link>
                         </button>
-                        <button>
+                        {/* <button>
                             My memes
-                        </button>
-                        <button>
+                        </button> */}
+                        <button className={styles.button}>
                             <Link to={"/create"}>
                                 Create meme
                             </Link>
@@ -35,12 +35,12 @@ const Header = () => {
                         </button>
                     </>
                     : <>
-                        <button>
+                        <button className={styles.button}>
                             <Link to={"/login"}>
                                 Log in
                             </Link>
                         </button>
-                        <button>
+                        <button className={styles.button}>
                             <Link to={"/register"}>
                                 Register
                             </Link>
