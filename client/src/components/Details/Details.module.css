@@ -6,11 +6,12 @@
 }
 
 .card {
-  width: 80%;
+  width: 60%;
   background-color: white;
   border-radius: 30px;
   justify-content: center;
   flex-direction: column;
+  margin-top: 50px;
 }
 
 .image {
@@ -25,10 +26,25 @@
   text-align: center;
   padding: 30px 0;
   font-size: 24px;
+  font-family: 'Pacifico', cursive;
 }
 
 h1 {
   padding: 50px 0;
 }
 
+.button {
+  margin: 5px 0px 30px 40px;
+  background-color: var(--peach-color);
+  /* margin-right: 10px; */
+  padding: 5px 10px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
 
+.button:hover {
+  background-color: tomato;
+}
