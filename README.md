@@ -11,3 +11,4 @@
 ## Usage
 1. You must register a user, then add some memes to populate the data base
 2. The logo in the upper left corner is 'Home' button
+3. To view details, edit and delete buttons, click on a meme
